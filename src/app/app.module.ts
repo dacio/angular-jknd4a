@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ArticlesModule } from './articles/articles.module';
 import { ProductsModule } from './products/products.module';
+import { ComicBooksModule } from './comic-books/comic-books.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgSanityCheckComponent } from './components/ng-sanity-check/ng-sanity-check.component';
 
@@ -31,6 +32,7 @@ import { NgSanityCheckComponent } from './components/ng-sanity-check/ng-sanity-c
     NgbModule,
     ArticlesModule,
     ProductsModule,
+    ComicBooksModule,
     AppRoutingModule
   ],
   providers: [],
