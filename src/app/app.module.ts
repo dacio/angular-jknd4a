@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ArticlesModule } from './articles/articles.module';
 import { ProductsModule } from './products/products.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgSanityCheckComponent } from './components/ng-sanity-check/ng-sanity-check.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AboutComponent,
     PrivacyComponent,
     TermsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NgSanityCheckComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,18 @@
+<p>Click a button to display the respective Angular CLI command</p>
+<ul class="list-inline">
+  <li class="list-inline-item"><button type="button" class="btn btn-primary" (click)="selection.value = 'component'" >New Component</button></li>
+  <li class="list-inline-item"><button type="button" class="btn btn-primary" (click)="selection.value = 'material'" >Angular Material</button></li>
+  <li class="list-inline-item"><button type="button" class="btn btn-primary" (click)="selection.value = 'dependency'" >Add Dependency</button></li>
+  <li class="list-inline-item"><button type="button" class="btn btn-primary" (click)="selection.value = 'test'" >Run & Watch Tests</button></li>
+  <li class="list-inline-item"><button type="button" class="btn btn-primary" (click)="selection.value = 'build'" >Build for Production</button></li>
+</ul>
+
+<input type="hidden" #selection>
+
+<p [ngSwitch]="selection.value">
+  <code *ngSwitchDefault>ng generate component xyz</code>
+  <code *ngSwitchCase="'material'">ng add @angular/material</code>
+  <code *ngSwitchCase="'dependency'">ng add _____</code>
+  <code *ngSwitchCase="'test'">ng test</code>
+  <code *ngSwitchCase="'build'">ng build --prod</code>
+</p>
