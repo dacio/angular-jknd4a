@@ -6,7 +6,6 @@ import { ComicBooksComponent } from './comic-books/comic-books.component';
 import { ComicBookDetailsComponent } from './comic-book-details/comic-book-details.component';
 import { ComicBookListComponent } from './comic-book-list/comic-book-list.component';
 
-
 @NgModule({
   declarations: [ComicBooksComponent, ComicBookDetailsComponent, ComicBookListComponent],
   imports: [
