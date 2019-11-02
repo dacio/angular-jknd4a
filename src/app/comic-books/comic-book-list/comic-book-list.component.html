@@ -2,7 +2,7 @@
   <h1>Comic Book List</h1>
   <ul class="list-group">
     <li *ngFor="let p of comicBooks" class="list-group-item">
-      <a (click)="gotoDetails(p.id)" routerLinkActive="active">{{p.prodName}}</a>
+      <a (click)="gotoDetails(p.id)" routerLinkActive="active">{{p.title.rendered}}</a>
     </li>
   </ul>
   <router-outlet></router-outlet>

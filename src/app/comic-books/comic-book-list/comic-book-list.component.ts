@@ -23,6 +23,7 @@ export class ComicBookListComponent implements OnInit {
     this.service.getPosts()
       .subscribe( data => {
         console.log(data);
+        this.comicBooks = data;
       });
   }
 
