@@ -1,10 +1,17 @@
 <div class="container-fluid">
   <h1>Comic Book List</h1>
-  <ul class="list-group">
-    <li *ngFor="let p of comicBooks" class="list-group-item">
-      <img [src]="p.jetpack_featured_media_url" class="img-thumbnail">
-      <a (click)="gotoDetails(p.id)" routerLinkActive="active" [innerHtml]="p.title.rendered"></a>
-    </li>
-  </ul>
+  <div class="row">
+    <div class="col-md-3" *ngFor="let p of comicBooks">
+      <div class="card">
+        <img class="card-img-top" [src]="p.jetpack_featured_media_url" alt="{{p.title.rendered}}">
+
+        <div class="card-body">
+          <h5 class="card-title" [innerHtml]="p.title.rendered"></h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a class="btn btn-primary" (click)="gotoDetails(p.id)" routerLinkActive="active">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <router-outlet></router-outlet>
 </div>
