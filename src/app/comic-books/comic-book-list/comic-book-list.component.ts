@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { ComicBooksService} from '../comic-books.service'
+import { ComicBooksService} from 'app/comic-books/comic-books.service'
 
 @Component({
   selector: 'app-comic-book-list',
