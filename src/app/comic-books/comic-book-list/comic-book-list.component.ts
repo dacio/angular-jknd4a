@@ -10,21 +10,11 @@ import { ComicBooksService} from '../comic-books.service'
 })
 export class ComicBookListComponent implements OnInit {
 
-  comicBooks: any = [];
-
   constructor(private router: Router, private route: ActivatedRoute, private service: ComicBooksService) { }
 
   ngOnInit() {
     console.log(this.service.todayDate());
-    this.getComicBooks();
-  }
-
-  getComicBooks() {
-    this.service.getPosts()
-      .subscribe( data => {
-        console.log(data);
-        this.comicBooks = data;
-      });
+    this.service.getComicBooks();
   }
 
   gotoDetails(id: any) {
