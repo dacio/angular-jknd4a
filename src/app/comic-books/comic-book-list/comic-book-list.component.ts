@@ -16,6 +16,7 @@ export class ComicBookListComponent implements OnInit {
 
   ngOnInit() {
     this.service.getComicBooks();
+    this.service.getMonsterData();
   }
 
   inProgress() {
