@@ -19,10 +19,10 @@ const routes: Routes = [{
   }, {
     path: ':id',
     component: ComicBookDetailsComponent
-  }, {
-    path: 'monster-data',
-    component: MonsterDataComponent
   }]
+}, {
+  path: 'monster-data',
+  component: MonsterDataComponent
 }];
 
 @NgModule({
