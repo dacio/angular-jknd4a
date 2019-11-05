@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -13,7 +15,7 @@ export class ComicBookListComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute, private service: ComicBooksService) { }
 
   ngOnInit() {
-    console.log(this.service.todayDate());
+    console.log(_.toLower('ASFs fasfsf'));
     this.service.getComicBooks();
   }
 
