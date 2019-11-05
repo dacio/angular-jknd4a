@@ -6,8 +6,19 @@
   background-size: cover;
   background-position: center;
   border-radius: 0;
+  margin-bottom: 0;
 
   h1, p {
     color: #ffffff;
   }
+}
+
+#first {
+  background-image: url("./img/camobg.png");
+}
+
+#second {
+  background-image: url("./img/kadenbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
