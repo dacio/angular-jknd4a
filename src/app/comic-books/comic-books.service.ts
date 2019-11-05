@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http'; // rxjs
 
 const apiURL: string = 'https://getcomics.info/wp-json/wp/v2';
 const monsterApi: string = 'https://api-grid.monsterenergy.com/api/home'
