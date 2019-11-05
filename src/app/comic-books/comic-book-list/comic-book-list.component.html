@@ -4,14 +4,14 @@
     <span class="sr-only">Loading...</span>
   </div>
   <div *ngIf="!inProgress()" class="row">
-    <div class="col-md-3" *ngFor="let p of service.comicBooks">
+    <div class="col-md-3" *ngFor="let book of service.comicBooks">
       <div class="card">
-        <img class="card-img-top" [src]="p.jetpack_featured_media_url" alt="{{p.title.rendered}}">
+        <img class="card-img-top" [src]="book.jetpack_featured_media_url" alt="{{book.title.rendered}}" title="{{book.title.rendered}}">
 
         <div class="card-body">
-          <h5 class="card-title" [innerHtml]="p.title.rendered"></h5>
-          <p class="card-text" [innerHtml]="p.excerpt.rendered"></p>
-          <a class="btn btn-primary" (click)="gotoDetails(p.id)" routerLinkActive="active">View</a>
+          <h5 class="card-title" [innerHtml]="book.title.rendered"></h5>
+          <p class="card-text" [innerHtml]="book.excerpt.rendered"></p>
+          <a class="btn btn-primary" (click)="gotoDetails(book.id)" routerLinkActive="active">View</a>
         </div>
       </div>
     </div>
