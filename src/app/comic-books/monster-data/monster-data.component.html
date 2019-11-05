@@ -1,3 +1,10 @@
 <div class="container-fluid">
-  <p>monster-data works!</p>
+  <h1>Monster Energy Data</h1>
+  <div *ngIf="inProgress()" class="spinner-border text-info" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div *ngIf="!inProgress()" class="row">
+    <pre>{{service.monsterData | json}}</pre>
+  </div>
+  <router-outlet></router-outlet>
 </div>

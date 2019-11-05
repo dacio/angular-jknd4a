@@ -1,4 +1,9 @@
+import _ from 'lodash';
+
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
+import { ComicBooksService} from 'app/comic-books/comic-books.service'
 
 @Component({
   selector: 'app-monster-data',
@@ -7,9 +12,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MonsterDataComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute, private service: ComicBooksService) { }
 
   ngOnInit() {
+    this.service.getMonsterData();
+  }
+
+  inProgress() {
+    return _.isUndefined(this.service.monsterData)
   }
 
 }

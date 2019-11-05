@@ -10,6 +10,7 @@ const monsterApi: string = 'https://api-grid.monsterenergy.com/api/home'
 
 export class ComicBooksService {
   comicBooks: any = undefined;
+  monsterData: any = undefined;
 
   constructor(private http: HttpClient) { }
 
@@ -37,7 +38,7 @@ export class ComicBooksService {
   getMonsterData() {
     this.getData()
       .subscribe( data => {
-        console.log(data);
+        this.monsterData = data;
       })
   }
 }
