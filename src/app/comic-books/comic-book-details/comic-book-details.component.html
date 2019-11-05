@@ -1,2 +1,7 @@
-<h1 [innerHtml]="comicBook.prodName"></h1>
-<p [innerHtml]="comicBook.content.rendered"></p>
+<div class="container-fluid">
+  <h1 [innerHtml]="comicBook.prodName"></h1>
+  <p [innerHtml]="comicBook.content.rendered"></p>
+  <p>
+    <img [src]="comicBook.jetpack_featured_media_url" alt="{{comicBook.title.rendered}}" title="{{comicBook.title.rendered}}">
+  </p>
+</div>

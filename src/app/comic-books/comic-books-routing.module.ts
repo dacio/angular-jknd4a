@@ -13,18 +13,13 @@ const routes: Routes = [
   {
     path: 'comic-books',
     component: ComicBooksComponent,
-    children: [
-      {
-        path: '',
-        component: ComicBookListComponent,
-        children: [
-          {
-            path: ':id',
-            component: ComicBookDetailsComponent
-          }
-        ]
-      }
-    ]
+    children: [{
+      path: '',
+      component: ComicBookListComponent,
+    }, {
+      path: ':id',
+      component: ComicBookDetailsComponent
+    }]
   }
 ];
 
