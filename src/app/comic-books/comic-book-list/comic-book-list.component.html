@@ -1,6 +1,9 @@
 <div class="container-fluid">
   <h1>Comic Book List</h1>
-  <div class="row">
+  <div *ngIf="!service.comicBooks" class="spinner-border text-info" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div *ngIf="service.comicBooks" class="row">
     <div class="col-md-3" *ngFor="let p of service.comicBooks">
       <div class="card">
         <img class="card-img-top" [src]="p.jetpack_featured_media_url" alt="{{p.title.rendered}}">

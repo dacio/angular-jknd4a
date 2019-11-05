@@ -8,7 +8,7 @@ const apiURL: string = 'https://getcomics.info/wp-json/wp/v2';
 })
 
 export class ComicBooksService {
-  comicBooks: any = [];
+  comicBooks: any = undefined;
 
   constructor(private http: HttpClient) { }
 
