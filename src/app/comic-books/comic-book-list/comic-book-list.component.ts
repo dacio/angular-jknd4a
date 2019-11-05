@@ -15,8 +15,11 @@ export class ComicBookListComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute, private service: ComicBooksService) { }
 
   ngOnInit() {
-    console.log(_.toLower('ASFs fasfsf'));
     this.service.getComicBooks();
+  }
+
+  inProgress() {
+    return _.isUndefined(this.service.comicBooks)
   }
 
   gotoDetails(id: any) {

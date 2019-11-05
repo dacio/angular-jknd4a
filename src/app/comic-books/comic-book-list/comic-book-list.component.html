@@ -1,16 +1,16 @@
 <div class="container-fluid">
   <h1>Comic Book List</h1>
-  <div *ngIf="!service.comicBooks" class="spinner-border text-info" role="status">
+  <div *ngIf="inProgress()" class="spinner-border text-info" role="status">
     <span class="sr-only">Loading...</span>
   </div>
-  <div *ngIf="service.comicBooks" class="row">
+  <div *ngIf="!inProgress()" class="row">
     <div class="col-md-3" *ngFor="let p of service.comicBooks">
       <div class="card">
         <img class="card-img-top" [src]="p.jetpack_featured_media_url" alt="{{p.title.rendered}}">
 
         <div class="card-body">
           <h5 class="card-title" [innerHtml]="p.title.rendered"></h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text" [innerHtml]="p.excerpt.rendered"></p>
           <a class="btn btn-primary" (click)="gotoDetails(p.id)" routerLinkActive="active">View</a>
         </div>
       </div>
